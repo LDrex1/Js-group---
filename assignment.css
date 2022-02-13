@@ -116,6 +116,10 @@ body {
     color: rgb(78, 76, 76);
 }
 
+.bg_image {
+    background-image: ;
+}
+
 .shopNow_container button {
     background-color: rgb(104, 56, 12);
     color: rgb(78, 76, 76);
