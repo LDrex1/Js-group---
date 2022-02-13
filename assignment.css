@@ -126,3 +126,9 @@ body {
     padding: 0.4rem;
     margin-left: 4rem;
 }
+
+.image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
