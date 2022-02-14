@@ -8,7 +8,7 @@ body, html {
     box-sizing: border-box;    
 }
 
-body {
+.bg_image {
     top: 0;
     background-image: url(./challenge.jpg);
     background-position: center center;
@@ -32,11 +32,16 @@ body {
     margin: auto;
 }
 
-.navigation{
+.navigation, .navigation2{
     background-color: white;
     height: max-content;
     
 }
+
+.navigation2, .navigation2_1{
+    display: none;
+}
+
 .nav_bar {
     display: flex;
     justify-content: space-evenly;
@@ -79,6 +84,12 @@ body {
 
 .nav_bar .left_nav ul {
     justify-content: right;
+    right: 0;
+    text-align: right;
+}
+
+.nav_bar .right_nav ul {
+    justify-content: left;
 }
 
 .nav_bar ul li {
@@ -138,13 +149,40 @@ body {
 }
 
 @media (max-width: 1288px){
-
-
+    
 }
 
 
-@media (max-width: 890px){
+@media (max-width: 770px){
+    .navigation{
+        display: none;
+    }
 
+    .navigation2, .navigation2_1{
+        display: block;
+        text-align: center;
+    }  
+
+    .nav_bar {
+        display: flex;
+        justify-content: space-around;
+        font-family: Harrington;
+        color: #bc8f8f;
+        width: 80%;
+        margin: auto;
+        height: inherit;
+    }
+
+    .nav_bar .right_nav ul {
+        justify-content: center;
+    }
+    
+    .nav_bar ul li {
+        list-style: none; 
+        margin: 0;
+        padding: 0;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
 }
 
 @media (max-width: 450px)
