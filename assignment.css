@@ -11,12 +11,10 @@ body, html {
 body {
     top: 0;
     background-image: url(./challenge.jpg);
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
-    padding: 0;
-    margin-top: 0;
+    background-attachment: fixed;
     height: 100vh;
 }
 
@@ -25,7 +23,7 @@ body {
     color: #bc8f8f;
     font-family: cursive;
     text-align: center;
-    height: 4.2vh;
+    height: max-content;
 }
 
 .slogan h3 {
@@ -36,7 +34,7 @@ body {
 
 .navigation{
     background-color: white;
-    height: 5vh;
+    height: max-content;
     
 }
 .nav_bar {
@@ -67,7 +65,6 @@ body {
     margin-bottom: auto;
 }
 
-
 .nav_bar .right_nav{
     width: 14rem;
     margin-top: auto;
@@ -78,6 +75,10 @@ body {
     display: flex;
     column-gap: 25px;
     margin: auto;
+}
+
+.nav_bar .left_nav ul {
+    justify-content: right;
 }
 
 .nav_bar ul li {
