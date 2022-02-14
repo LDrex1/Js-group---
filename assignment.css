@@ -5,7 +5,8 @@
 }
 
 body, html {
-    box-sizing: border-box;    
+    box-sizing: border-box; 
+    height: max-content; 
 }
 
 .bg_image {
@@ -30,12 +31,12 @@ body, html {
     padding-top: 0.3rem;
     text-align: center;
     margin: auto;
+    margin-bottom: 0;
 }
 
 .navigation, .navigation2{
     background-color: white;
     height: max-content;
-    
 }
 
 .navigation2, .navigation2_1{
@@ -83,13 +84,13 @@ body, html {
 }
 
 .nav_bar .left_nav ul {
-    justify-content: right;
+    width: 12rem;
     right: 0;
-    text-align: right;
+    justify-content: flex-end;
 }
 
 .nav_bar .right_nav ul {
-    justify-content: left;
+    justify-content: flex-start;
 }
 
 .nav_bar ul li {
@@ -117,10 +118,18 @@ body, html {
 }
 
 .shopNow_container {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
     width: fit-content;
-    height: 8.5rem;
+    height: max-content;
     margin-left: 10%;
-    margin-top: 17rem;
+    height: auto;
+}
+
+.shopNow_container .shopNow_content {
+    height: max-content;
+    margin: auto;
 }
 
 .shopNow_container h1 {
@@ -164,8 +173,6 @@ body, html {
     }  
 
     .nav_bar {
-        display: flex;
-        justify-content: space-around;
         font-family: Harrington;
         color: #bc8f8f;
         width: 80%;
@@ -173,8 +180,11 @@ body, html {
         height: inherit;
     }
 
-    .nav_bar .right_nav ul {
-        justify-content: center;
+    .nav_bar ._nav ul {
+        display: flex;
+        justify-content: space-between;
+        
+        margin: auto;
     }
     
     .nav_bar ul li {
