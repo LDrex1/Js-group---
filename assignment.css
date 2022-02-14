@@ -11,7 +11,7 @@ body, html {
 body {
     top: 0;
     background-image: url(./challenge.jpg);
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
