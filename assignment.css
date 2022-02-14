@@ -16,7 +16,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
-    min-width: max-content;
+    max-width: max-content;
 }
 
 .slogan {
