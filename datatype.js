@@ -1,5 +1,5 @@
 //page start
-alert("Assignment Week 2");
+//alert("Assignment Week 2");
 
 //Week 1, 4-10
 //number 4
@@ -134,6 +134,165 @@ let salary = Number(parmeters[0]), bonus = Number(parmeters[1]),
              onlineCourses = Number(parmeters[2]);
 var annualIncome = (12 * (salary + onlineCourses) + bonus) + " " + "euros";
 console.log(annualIncome);
+
+//Week 3
+//Exercise 1
+console.log("WEEK 3");
+let city = "Lagos", isMarried = false, year = 2022;
+ 
+console.log(typeof firstName); console.log(typeof lastName);
+console.log(typeof country); console.log(typeof city);
+console.log(typeof age); console.log(typeof isMarried)
+console.log(typeof year);
+
+console.log((typeof "10") == (typeof 10) );
+console.log((parseInt(9,8)) == 10 );
+
+5 + 7 - 9;
+firstName + lastName;
+4 > 3;
+
+let zero = null;
+5/firstName;
+age * 0;
+
+4 > 3;
+console.log("phyton" == "jargon");
+
+//7
+let calender = new Date;
+console.log(calender.getFullYear());
+console.log(calender.getMonth());
+console.log(calender.getHours());
+console.log(calender.getMinutes());
+console.log(calender.getTime());
+
+//Execise 2
+
+function triangle() {
+var base = prompt("base for triangle");
+var height = prompt("height of triangle");
+var area = 0.5 * base * height;
+alert(`area = ${area}`);
+
+var sideA = prompt("side a");
+var sideB = prompt("side b");
+var sideC = prompt("side c");
+perimeter = sideA + sideB + sideC;
+alert(`perimeter = ${perimeter}`);
+}
+
+function rectangle() {
+lengthR = prompt("length of rectangle");
+width = prompt("width of rectangle");
+perimeterR = 2 * (lengthR * width);
+alert(`perimeter = ${perimeterR}`);
+}
+
+function circle() {
+const pi = 3.14;
+var radius = prompt("radius of circle");
+var areaC = pi * Math.pow(radius, 2);
+var circumference = 2 * pi * radius;
+alert(`area of circle = ${areaC}`);
+alert(`circumference = ${circumference}`);
+}
+
+ x1 = 2, y1 = 2, x2 = 6, y2 = 10;
+slope = (y2 - y1)/ (x2-x1);
+
+var ex;
+var why;
+function quad() {
+
+    function calculation() {
+        while (why != 0) {
+        ex = Math.floor(Math.random()* 20) - 20;
+        why = Math.pow(ex, 2) + 6*ex + 9;
+    }
+
+    }
+
+ 
+calculation();
+
+}
+
+quad();
+console.log(`y equals zero when x equals ${ex}`);
+
+//
+function earning() {
+var hours = prompt("Enter hours");
+var hourlyRate = prompt("Enter rate per hour");
+var weeklyEarning = hours * hourlyRate;
+alert (`your weekly warning is ${weeklyEarning}`);
+}
+
+function nameLength() {
+ var nameLength = prompt("enter your name");
+    if (nameLength.length > 7) {
+                    alert ("name is too long"); }
+    else if (nameLength.length < 7) { 
+                    alert ("name is too short");
+            }
+    }
+
+
+
+if (firstName > lastName) {
+    console.log (`your first name. ${firstName} is longer than your last name, 
+     ${lastName}`);
+}  
+else {
+    console.log (`your last name. ${lastName} is longer than your first name, 
+     ${firstName}`);
+}
+
+function birthYear() {
+let birthyear = prompt("In what year were you born");
+    let yearA = 2022 - birthyear;
+    if (yearA >= 18) {
+    alert (`your are ${yearA} years old, your are old enough to drive`);
+}  
+else {
+ alert (`you are ${yearA} years old. you will be allowed to drive after 
+ ${18 - yearA} years`);
+}
+
+}
+
+dateYear = calender.getFullYear();
+dateMonth = calender.getMonth();
+dateDays = calender.getDay();
+dateHours = calender.getHours();
+dateMinutes = calender.getMinutes();
+dateTime = calender.getTime();
+
+console.log(`${dateYear}-${dateMonth}-${dateDays} ${dateHours}:${dateMinutes}`);
+console.log(`${dateDays}-${dateMonth}-${dateYear} ${dateHours}:${dateMinutes}`);
+console.log(`${dateDays}/${dateMonth}/${dateYear} ${dateHours}:${dateMinutes}`);
+
+if (dateHours <10){
+   dateHours = ('0' +dateHours);
+}
+
+if (dateMinutes < 10){
+   dateMinutes = ('0' +dateMinutes);
+}
+
+console.log(`${dateYear}-${dateMonth}-${dateDays} ${dateHours}:${dateMinutes}`);
+
+
+
+
+
+
+
+
+
+
+
 
 
 
