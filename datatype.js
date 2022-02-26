@@ -175,16 +175,16 @@ var height = prompt("height of triangle");
 var area = 0.5 * base * height;
 alert(`area = ${area}`);
 
-var sideA = prompt("side a");
-var sideB = prompt("side b");
-var sideC = prompt("side c");
+var sideA = Number(prompt("side a"));
+var sideB = Number(prompt("side b"));
+var sideC = Number(prompt("side c"));
 perimeter = sideA + sideB + sideC;
 alert(`perimeter = ${perimeter}`);
 }
 
 function rectangle() {
-lengthR = prompt("length of rectangle");
-width = prompt("width of rectangle");
+lengthR = Number(prompt("length of rectangle"));
+width = Number(prompt("width of rectangle"));
 perimeterR = 2 * (lengthR * width);
 alert(`perimeter = ${perimeterR}`);
 }
