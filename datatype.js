@@ -23,7 +23,7 @@ console.log(typeof x4);
 let a1, a2, a3, a4;
 
 //number 7 and 8
-const firstName = "Damilare", lastName = "Abiola", maritalStatus = "single", country = "Nigeria", age = 22;
+const firstName = "Damilare", lastName = "Abiola", maritalStatus = "single", countr = "Nigeria", age = 22;
 
 //number 9
 const fN = "Damilare";
@@ -141,7 +141,7 @@ console.log("WEEK 3");
 let city = "Lagos", isMarried = false, year = 2022;
  
 console.log(typeof firstName); console.log(typeof lastName);
-console.log(typeof country); console.log(typeof city);
+console.log(typeof countr); console.log(typeof city);
 console.log(typeof age); console.log(typeof isMarried)
 console.log(typeof year);
 
@@ -284,24 +284,203 @@ if (dateMinutes < 10){
 console.log(`${dateYear}-${dateMonth}-${dateDays} ${dateHours}:${dateMinutes}`);
 
 
+/* Week 4 Conditionals
+Exercises form no 4 */
+//no 4
+console.log(`WEEK 4`);
+var giveAway;
+let ash = ("#");
+for( let i = 0; i < 7; i++){
+    space = ("\n");
+    console.log (ash + space);
+    ash += "#";
+}
+
+//no 6
+let i = 0;
+console.log(`i\t\ti^2\t\ti^3`);
+while (i < 10) {
+    console.log(`${i} \t\t${i**2} \t\t${i**3}`);
+    i+=1;
+}
+
+//no 9
+let num = 0;
+const prime = [];
+while (num < 100) {
+    num++;
+    let primenum = 1;
+    if (num < 4){
+        continue;
+    }
+
+    for (let i = 2; i < num; i++) {
+        if (num % i == 0) {
+            primenum = 0;
+            break;
+        }
+    }
+
+    if (primenum == 1) {
+    prime.push(num);
+    }
+}
+console.log(prime);
+
+//10
+let sum = 0;
+num = 0;
+while (num <= 100) {
+    sum = sum + num;
+    num++;
+}
+console.log(sum);
+
+//no 12
+num = 0;
+let sumEven = 0; sumOdd = 0;
+
+while (num < 100) {
+    num++;
+        if (num % 2 == 0) {
+            sumEven +=num;
+        }    
+        else {
+            sumOdd +=num;
+        }
+}
+const sums = [sumEven, sumOdd]
+console.log(sums);
+
+//14
+num = 0;
+let rand;
+let randnu = [];
+while (num < 5) {
+    rand = Math.floor(Math.random()*5 + 1);
+    if (randnu.includes(rand)) {
+        num--;
+    }
+    else {
+        randnu.push(rand);}
+    num++;
+}
+console.log(randnu);
 
 
+//Exercise 2
+const countries = [
+    'Albania','Bolivia','Canada','Denmark','Ethiopia',
+    'Finland','Germany','Hungary','Ireland','Japan','Kenya'
+  ]
+  
+  const webTechs = [
+    'HTML','CSS','JavaScript',
+    'React','Redux','Node','MongoDB'
+  ]
+  
+  const mernStack = ['MongoDB', 'Express', 'React', 'Node']
+//no 1
+let arrayNum = "0123456789".split("");
+console.log(arrayNum);
+let arrayAlph = "abcdefghijklmnopqrstuvwxyz".split("");
+let figure;
+let letter;
+let charNum;
+let arrRandomId = [];
+let randomId;
+for (i = 0; i< Math.floor(Math.random()*20 + 3); i++) {
+    charNum = Math.floor(Math.random()*2);
+    figure = arrayNum[Math.floor(Math.random()*10 )];
+    letter = arrayAlph[Math.floor(Math.random()*26 )];
+    if (charNum == 0) {
+        arrRandomId.push(figure)
+    }
+    else {
+        arrRandomId.push(letter)
+    }
+}
+randomId = arrRandomId.join("");
+console.log(randomId);
 
+//no 6
+let countriesLength = [];
 
+for (num = 0; num < countries.length; num++) {
+    countriesLength.push(countries[num].length);
+}
+console.log(countriesLength);
+let gr3Country = [];
+let grCountry = [];
+for (i = 0; i< countries.length; i++) {
+    gr3Country =
+    [countries[i], countries[i].substring(0,3).toUpperCase(), countries[i].length];
+    grCountry.push(gr3Country);
+}
+console.log(grCountry);
 
+//no 7
+let landArray = [];
+i = 0;
+while (i < countries.length) {
+    if (countries[i].includes("land")){
+        landArray.push(countries[i]);
+    }
+    i++;
+}
+console.log(landArray);
 
+//Exercise 3
+const countriesFull = [
+    'Afghanistan','Albania','Algeria','Andorra','Angola','Antigua and Barbuda',
+    'Argentina','Armenia','Australia','Austria','Azerbaijan','Bahamas','Bahrain',
+    'Bangladesh','Barbados','Belarus','Belgium','Belize','Benin','Bhutan','Bolivia',
+    'Bosnia and Herzegovina','Botswana','Brazil','Brunei','Bulgaria','Burkina Faso',
+    'Burundi','Cambodia','Cameroon','Canada','Cape Verde','Central African Republic',
+    'Chad','Chile','China','Colombi','Comoros','Congo (Brazzaville)','Congo','Costa Rica',
+    "Cote d'Ivoire",'Croatia','Cuba','Cyprus','Czech Republic','Denmark','Djibouti','Dominica',
+    'Dominican Republic','East Timor (Timor Timur)','Ecuador','Egypt','El Salvador','Equatorial Guinea',
+    'Eritrea','Estonia','Ethiopia','Fiji','Finland','France','Gabon','Gambia, The','Georgia',
+    'Germany','Ghana','Greece','Grenada','Guatemala','Guinea','Guinea-Bissau','Guyana','Haiti',
+    'Honduras','Hungary','Iceland','India','Indonesia','Iran','Iraq','Ireland','Israel','Italy',
+    'Jamaica','Japan','Jordan','Kazakhstan','Kenya','Kiribati','Korea, North','Korea, South','Kuwait',
+    'Kyrgyzstan','Laos','Latvia','Lebanon','Lesotho','Liberia','Libya','Liechtenstein','Lithuania',
+    'Luxembourg','Macedonia','Madagascar','Malawi','Malaysia','Maldives','Mali','Malta','Marshall Islands',
+    'Mauritania','Mauritius','Mexico','Micronesia','Moldova','Monaco','Mongolia','Morocco','Mozambique',
+    'Myanmar','Namibia','Nauru','Nepal','Netherlands','New Zealand','Nicaragua','Niger','Nigeria',
+    'Norway','Oman','Pakistan','Palau','Panama','Papua New Guinea','Paraguay','Peru','Philippines',
+    'Poland','Portugal','Qatar','Romania','Russia','Rwanda','Saint Kitts and Nevis','Saint Lucia',
+    'Saint Vincent','Samoa','San Marino','Sao Tome and Principe','Saudi Arabia','Senegal',
+    'Serbia and Montenegro','Seychelles','Sierra Leone','Singapore','Slovakia','Slovenia','Solomon Islands',
+    'Somalia','South Africa','Spain','Sri Lanka','Sudan','Suriname','Swaziland','Sweden','Switzerland',
+    'Syria','Taiwan','Tajikistan','Tanzania','Thailand','Togo','Tonga','Trinidad and Tobago','Tunisia',
+    'Turkey','Turkmenistan','Tuvalu','Uganda','Ukraine','United Arab Emirates','United Kingdom',
+    'United States','Uruguay','Uzbekistan','Vanuatu','Vatican City','Venezuela','Vietnam',
+    'Yemen','Zambia','Zimbabwe'
+  ]
+//no 2
+let sortedCountries;
+let sortedWebTechs;
+let sortedMernStack;
+sortedCountries = countriesFull.sort();
+sortedWebTechs = webTechs.sort();
+sortedMernStack = mernStack.sort();
 
+//no 7
+i = 0;
+let countries4 = []; 
+while (i < countriesFull.length) {
+    if (countriesFull[i].length == 4){
+        countries4.push(countriesFull[i]);
+    }
+    i++;
+}
+console.log(countries4);
 
-
-
-
-
-
-
-
-
-
-
+//no 9
+let upperCountries;
+upperCountries = countriesFull.map(upper => {return upper.toUpperCase()});
+console.log(upperCountries);
 
 
 
