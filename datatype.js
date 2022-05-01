@@ -126,8 +126,11 @@ console.log(sentence.substring(31, 54));
 //Exercise 3
 //1-4
 var sentence2 =
-  "Love is the best thing in this world. Some found their \
-                love and some are still looking for their love";
+  "Love is the best thing in this world. Some found their\
+ love and some are still looking for their love";
+let ag = sentence2.split(" ");
+
+console.log(ag);
 console.log(sentence2.match(/love/gi));
 console.log(sentence.match(/because/gi));
 
@@ -719,3 +722,697 @@ console.log(`The median is ${median}`);
 let range;
 range = ages[ages.length - 1] - ages[0];
 console.log(`The range is ${range}`);
+
+/*Quadratic equation is calculated as follows: ax2 + bx + c = 0. 
+Write a function which calculates value or values of a quadratic equation,
+ solveQuadEquation.
+*/
+
+function quadE(ax, bx, cc) {
+  let formula1 = (-bx + Math.sqrt(bx * bx - 4 * ax * cc)) / (2 * ax);
+  let formula2 = (-bx - Math.sqrt(bx * bx - 4 * ax * cc)) / (2 * ax);
+  return `the roots are ${formula1} and ${formula2}`;
+}
+
+console.log(quadE(1, 4, 4));
+let emptArr;
+function reverseArray(arr) {
+  emptArr = [];
+  for (let i = arr.length - 1; i >= 0; i--) {
+    emptArr.push(arr[i]);
+  }
+  return emptArr;
+}
+console.log(reverseArray([1, 2, 3, 4]));
+
+function isAPrime(anyNum) {
+  let iAmPrime = 1;
+  for (i = 2; i < anyNum; i++) {
+    if (anyNum % i == 0) {
+      iAmPrime = 0;
+      break;
+    }
+  }
+  if (iAmPrime == 0) {
+    console.log(`${anyNum} is not prime number`);
+  } else {
+    console.log(`${anyNum} is a prime number`);
+  }
+}
+let firstone;
+let two;
+let three;
+
+const rgbColour = () => {
+  let emtarr1 = [];
+  let emptArr2 = [];
+  let emptArr3 = [];
+  for (i = 0; i <= 2; i++) {
+    let firstone = Math.floor(Math.random() * 3);
+    let secondone = Math.floor(Math.random() * 6);
+    let thirdone = Math.floor(Math.random() * 6);
+    emtarr1.push(firstone);
+    emptArr2.push(secondone);
+    emptArr3.push(thirdone);
+  }
+  let one = emtarr1.join("");
+  let two = emptArr2.join("");
+  let three = emptArr3.join("");
+  return console.log(`rgb(${one}, ${two},${three})`);
+};
+
+function sevenRandomNumbers() {
+  let emptArr4 = [];
+  num = 0;
+  while (num < 9) {
+    let randomaa = Math.floor(Math.random() * 10);
+    if (emptArr4.includes(randomaa)) {
+      console.log("jdj");
+      num--;
+    } else {
+      emptArr4.push(randomaa);
+    }
+    num++;
+  }
+  console.log(emptArr4);
+}
+sevenRandomNumbers();
+
+/*Write a function called modifyArray takes array as parameter 
+and modifies the fifth item of the array and return the array. 
+If the array length is less than five it return 'item not found'.*/
+const modifyArray = (modifyMe) => {
+  if (modifyMe.length < 5) {
+    console.log("Item not found");
+  } else {
+    let modi = modifyMe[4].toUpperCase();
+    modifyMe.splice(4, 1, modi);
+    return modifyMe;
+  }
+};
+
+console.log(modifyArray(["mango", "dndf", "djf", "ueh", "apple", "ieue"]));
+
+const users = {
+  Alex: {
+    email: "alex@alex.com",
+    skills: ["HTML", "CSS", "JavaScript"],
+    age: 20,
+    isLoggedIn: false,
+    points: 30,
+  },
+  Asab: {
+    email: "asab@asab.com",
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Redux",
+      "MongoDB",
+      "Express",
+      "React",
+      "Node",
+    ],
+    age: 25,
+    isLoggedIn: false,
+    points: 50,
+  },
+  Brook: {
+    email: "daniel@daniel.com",
+    skills: ["HTML", "CSS", "JavaScript", "React", "Redux"],
+    age: 30,
+    isLoggedIn: true,
+    points: 50,
+  },
+  Daniel: {
+    email: "daniel@alex.com",
+    skills: ["HTML", "CSS", "JavaScript", "Python"],
+    age: 20,
+    isLoggedIn: false,
+    points: 40,
+  },
+  John: {
+    email: "john@john.com",
+    skills: ["HTML", "CSS", "JavaScript", "React", "Redux", "Node.js"],
+    age: 20,
+    isLoggedIn: true,
+    points: 50,
+  },
+  Thomas: {
+    email: "thomas@thomas.com",
+    skills: ["HTML", "CSS", "JavaScript", "React"],
+    age: 20,
+    isLoggedIn: false,
+    points: 40,
+  },
+  Paul: {
+    email: "paul@paul.com",
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "MongoDB",
+      "Express",
+      "React",
+      "Node",
+    ],
+    age: 20,
+    isLoggedIn: false,
+    points: 40,
+  },
+};
+i = 1;
+
+let element0 = Object.keys(users);
+//let element = Object.keys(users);
+console.log(countLoggedInUsers(users));
+//console.log(users[element[1]]["isLoggedIn"]);
+function countLoggedInUsers(jg) {
+  i = 0;
+  let usersmore50 = 0;
+  let online = 0;
+  let element = Object.keys(jg);
+  while (i < element.length - 1) {
+    if (jg[element[i]]["isLoggedIn"]) {
+      online++;
+    }
+    if (jg[element[i]]["points"] >= 50) {
+      usersmore50++;
+    }
+    i++;
+  }
+  return { loggedInUsers: online, usersWithMoreThan50: usersmore50 };
+}
+function countUsers(jg) {
+  i = 0;
+  for (var prop in jg) {
+    if (jg.hasOwnProperty(prop)) i++;
+  }
+  return i;
+}
+console.log(countUsers(users));
+
+const usersWithMyName = { ...users, Dami: { points: 50 } };
+console.log(usersWithMyName);
+
+const users2 = [
+  {
+    _id: "ab12ex",
+    username: "Alex",
+    email: "alex@alex.com",
+    password: "123123",
+    createdAt: "08/01/2020 9:00 AM",
+    isLoggedIn: false,
+  },
+  {
+    _id: "fg12cy",
+    username: "Asab",
+    email: "asab@asab.com",
+    password: "123456",
+    createdAt: "08/01/2020 9:30 AM",
+    isLoggedIn: true,
+  },
+  {
+    _id: "zwf8md",
+    username: "Brook",
+    email: "brook@brook.com",
+    password: "123111",
+    createdAt: "08/01/2020 9:45 AM",
+    isLoggedIn: true,
+  },
+  {
+    _id: "eefamr",
+    username: "Martha",
+    email: "martha@martha.com",
+    password: "123222",
+    createdAt: "08/01/2020 9:50 AM",
+    isLoggedIn: false,
+  },
+  {
+    _id: "ghderc",
+    username: "Thomas",
+    email: "thomas@thomas.com",
+    password: "123333",
+    createdAt: "08/01/2020 10:00 AM",
+    isLoggedIn: false,
+  },
+];
+
+console.log(Object.values(users2).includes("Alex"));
+
+const products = [
+  {
+    _id: "eedfcf",
+    name: "mobile phone",
+    description: "Huawei Honor",
+    price: 200,
+    ratings: [
+      { userId: "fg12cy", rate: 5 },
+      { userId: "zwf8md", rate: 4.5 },
+    ],
+    likes: [],
+  },
+  {
+    _id: "aegfal",
+    name: "Laptop",
+    description: "MacPro: System Darwin",
+    price: 2500,
+    ratings: [],
+    likes: ["fg12cy"],
+  },
+  {
+    _id: "hedfcg",
+    name: "TV",
+    description: "Smart TV:Procaster",
+    price: 400,
+    ratings: [{ userId: "fg12cy", rate: 5 }],
+    likes: ["fg12cy"],
+  },
+];
+
+class newUser {
+  constructor(_id, username, email, password, createdAt, isLoggedIn) {
+    this._id = _id;
+    this.username = username;
+    this.email = email;
+    this.password = password;
+    this.createdAt = createdAt;
+    this.isLoggedIn = isLoggedIn;
+  }
+}
+
+let newSignUp = new newUser(
+  "were3",
+  "Dami",
+  "code@den.com",
+  "335e",
+  "02/10/2034",
+  true
+);
+
+function signUpMongo() {
+  let usernameUnique = true;
+  let newUser = {};
+  i = 0;
+  while (i < users2.length) {
+    if (Object.values(users2[i]).includes(newSignUp.username)) {
+      usernameUnique = false;
+      return console.log("username already exists, try a new one");
+    }
+    i++;
+  }
+  if (usernameUnique) {
+    newUser = { ...newSignUp };
+    users2.push(newUser);
+    return users2;
+  }
+}
+console.log(signUpMongo());
+const numbers = [1, 2, 3, 4];
+
+const sumArray = (arr) => {
+  let sum = 0;
+  const callBack = function (element) {
+    sum += element;
+  };
+  numbers.forEach(callBack);
+  return sum;
+};
+console.log(sumArray(numbers));
+
+let element = Object.keys(users);
+function myFunction(value) {
+  let skillsLengths = users[value].skills.length;
+  return skillsLengths;
+}
+let aaa = element.map(myFunction);
+bbb = aaa.indexOf(Math.max(...aaa));
+console.log(element[bbb]);
+
+function findUserMostSkills(kk) {
+  i = 1;
+  let j = 1;
+  let l = 0;
+  let usersMostSkills;
+  let element = Object.keys(kk);
+  usersMostSkills = kk[element[l]];
+  let firstUser = kk[element[j]];
+
+  while (i < element.length - 2) {
+    if (usersMostSkills.skills.length > firstUser.skills.length) {
+      j++;
+      i++;
+    } else {
+      usersMostSkills = firstUser;
+      i++;
+      j++;
+    }
+  }
+  return usersMostSkills;
+}
+
+function countUsers(jg) {
+  i = 0;
+  for (var prop in jg) {
+    if (jg.hasOwnProperty(prop)) i++;
+  }
+  return i;
+}
+
+console.log("WEEK 9");
+const ages1 = [
+  31, 26, 34, 37, 27, 26, 32, 32, 26, 27, 27, 24, 32, 33, 27, 25, 26, 38, 37,
+  31, 34, 24, 33, 29, 26,
+];
+
+const statistics = {
+  data: [],
+  count: function () {
+    return `${this["data"].length}`;
+  },
+  sum: function () {
+    sum = 0;
+    this["data"].forEach((num) => (sum += num));
+    return sum;
+  },
+  min: function () {
+    return `${Math.min(...this.data)}`;
+  },
+  max: function () {
+    return `${Math.max(...this.data)}`;
+  },
+  range: function () {
+    return statistics.max() - statistics.min();
+  },
+  mean: function () {
+    return statistics.sum() / statistics.count();
+  },
+  median: function () {
+    if (statistics.count() % 2 != 0) {
+      return this["data"][(statistics.count() - 1) / 2];
+    } else {
+      return (
+        (this["data"][statistics.count() / 2] +
+          this["data"][statistics.count() / 2 - 1]) /
+        2
+      );
+    }
+  },
+  mode: function () {},
+};
+
+var frequency = [];
+var maxFreq = 0;
+
+/*for (var prop in ages1) {
+  frequency[ages1[prop]] = (frequency[ages1[prop]] || 0) + 1;
+  if (frequency[ages1[prop]] > maxFreq) {
+    maxFreq = frequency[ages1[prop]];
+  }
+}
+
+for (var prop2 in frequency) {
+  if (frequency[prop2] == maxFreq) {
+    modes.push(prop2);
+  }
+}
+console.log(frequency);
+console.log(modes);*/
+let socks = [2, 5, 3, 2, 5, 10, 9, 5, 10];
+let mode = [];
+let modalCount = [];
+let dataSet = new Set(socks);
+
+for (const iterator of dataSet) {
+  const filteredNum = ages1.filter((num) => iterator === num);
+  modalCount.push({
+    mode: iterator,
+    count: filteredNum.length,
+  });
+}
+
+modalCount.sort((a, b) => {
+  return b.count - a.count;
+});
+
+modalCount.forEach((value) => {
+  if (value.count === modalCount[0].count) {
+    mode.push(value);
+  }
+});
+console.log(mode);
+ages1.forEach((num) => statistics.data.push(num));
+console.log(statistics.median());
+let languages = [
+  "English",
+  "Finnish",
+  "English",
+  "French",
+  "Spanish",
+  "English",
+  "French",
+];
+//console.log(isarr languages);
+
+let sock = [2, 5, 3, 2, 5, 10, 9, 5, 10];
+let dataSett = new Set(sock);
+let modalCountt = [];
+let countPair = [];
+
+for (const iterator of dataSett) {
+  const filteredNum = sock.filter((num) => iterator === num);
+  modalCountt.push({
+    modee: iterator,
+    countt: filteredNum.length,
+  });
+  countPair.push(Math.floor(filteredNum.length / 2));
+}
+sum = 0;
+countPair.forEach((num) => (sum += num));
+console.log(sum);
+console.log(countPair);
+//console.log(modalCountt)
+i = 0;
+let objj = {};
+const sam = (ling, lang) => {
+  for (const damn of ling) {
+    objj[damn] = lang[i];
+    i++;
+  }
+  return objj;
+};
+
+console.log(sam([123, 3, 1, 745, 4, "555"], [2, 4, 6, 7, 1, "nfi"]));
+i = 0;
+function hh(a, b) {
+  return a.reduce((acc, curr, l) => ({ ...acc, [curr]: b[l] }), {});
+}
+console.log(hh([2, 1, 5], [3, 2, 5]));
+
+//create an array an calculate the sum of the values in the array
+arr8 = [3, 4, 6, 7, 8, 9, 9];
+console.log(arr8.length);
+
+function sumArr(arr) {
+  let sum3 = 0;
+  for (i = arr.length - 1; i >= 0; i--) {
+    sum3 += arr[i];
+  }
+  return sum3;
+}
+
+sumArr(arr8);
+
+//create a function that converts an object to an array
+/*function objToArr() {
+  let obj10 = {};
+  let arr10 = [];
+
+}*/
+
+let objAmos = { firstNamea: "Amos", lastNamee: "Oma" };
+Object.entries(objAmos);
+Object.keys(objAmos);
+Object.values(objAmos);
+
+function objToArr(arr) {
+  return Object.entries(arr);
+}
+let arrobj = objToArr(objAmos);
+arrobj[0];
+Object.assign({}, [2, 3, 4]);
+const arr = ["foo", "boo", "zoo"];
+const obj = { ...arr };
+console.log(obj);
+
+//Given a string, reverse each word in the sentence.
+sentence0 = "someone should give me a sentence";
+let splitSentence = sentence0.split(" ");
+let newSentence = [];
+
+for (i = splitSentence.length - 1; i >= 0; i--) {
+  newSentence.push(splitSentence[i]);
+}
+console.log(newSentence);
+reversedSentence = newSentence.join(" ");
+
+reversedSentence.split(" ").reverse().join(" ");
+
+let sum2 = 0;
+const numbers2 = [1, 2, 3, 4, 5];
+let goat = numbers2.forEach((num) => {
+  sum2 += num;
+});
+
+console.log(goat);
+
+//Filter countries containing land
+const countriesContainingLand = countriesFull.filter((country) =>
+  country.endsWith("land")
+);
+console.log(countriesContainingLand);
+
+const countries3 = ["Finland", "Sweden", "Denmark", "Norway", "IceLand"];
+const names3 = ["Asabeneh", "Mathias", "Elias", "Brook"];
+const numbers3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const products3 = [
+  { product: "banana", price: 3 },
+  { product: "mango", price: 6 },
+  { product: "potato", price: " " },
+  { product: "avocado", price: 8 },
+  { product: "coffee", price: 10 },
+  { product: "tea", price: " " },
+  { product: "chai", price: 10 },
+];
+
+/*Find the total price of products by chaining two or more
+ array iterators(eg. arr.map(callback).filter(callback).reduce(callback))*/
+//products3.filter((p) => (typeof p["price"] === "number" ? p.price : null));
+// let llkl = products3
+//   .filter((p) => !isNaN(p["price"]))
+//   .reduce((a, cv) => Number(a) + Number(cv.price), 0);
+// console.log(llkl);
+
+let price = products3
+  .filter((p) => typeof p.price === "number")
+  .reduce((a, cv) => a + cv.price, 0);
+console.log(price);
+
+// let price = products3
+//   .filter((p) => (p.price !== " " ? p.price : null))
+//   .reduce((a, cv) => a + cv.price, 0);
+
+// let price = products3
+// .reduce((p,a,cv) => {p.price !== " " ? p.price : null a + cv.price};
+
+products3
+  .map((a) => {
+    return a.price;
+  })
+  .filter((s) => {
+    return typeof s === "number";
+  })
+  .reduce((t, r) => {
+    return t + r;
+  }, 0);
+
+/*Try to develop a program which calculate measure of central
+ tendency of a sample(mean, median, mode) and measure of 
+ variability(range, variance, standard deviation). In addition
+  to those measures find the min, max, count, percentile, 
+  and frequency distribution of the sample. You can create
+   an object called statistics and create all the functions which 
+   do statistical calculations as method for the statistics object. 
+   Check the output below.*/
+
+let statistics1 = {
+  firstName: "Ebuka",
+  lastName: "Okafor",
+  fullName() {
+    return `${this.firstName}  ${this.lastName}`;
+  },
+  count() {
+    return ages1.length;
+  },
+  sum() {
+    return ages1.reduce((a, r) => a + r);
+  },
+  min() {
+    return Math.min(...ages1);
+  },
+  max() {
+    return Math.max(...ages1);
+  },
+  range() {
+    let df = statistics1.max() - statistics1.min();
+    return df;
+  },
+  mean() {
+    return statistics1.sum() / statistics1.count();
+  },
+  mode() {},
+};
+statistics1.count();
+statistics1.sum();
+statistics1.mean();
+
+let wordA1 = "army";
+let wordA2 = "maiy";
+
+let ii = wordA1.split("").sort().join("");
+let iii = wordA2.split("").sort().join("");
+let jj;
+if (ii === iii) {
+  jj = true;
+}
+
+let arryu = [7, 5, 3, 4, 1, 8, 2, 2, 6, 1];
+// function sortMe(arr) {
+//   let arrClone = [];
+//   for (const each of arr) {
+//     arrClone.push(each);
+//   }
+//   let doMe = 1;
+//   while (doMe) {
+//     ii = 0;
+//     doMe = 0;
+//     while (ii < arr.length) {
+//       if (arrClone[ii + 1] < arrClone[ii]) {
+//         let high = arrClone[ii];
+//         arrClone[ii] = arrClone[ii + 1];
+//         arrClone[ii + 1] = high;
+//         doMe = 1;
+//       }
+//       ii++;
+//     }
+//   }
+
+//   return arrClone;
+// }
+
+// sortMe(arryu);
+// console.log(sortMe(arryu));
+function sortMe(arr) {
+  for (const each of arr) {
+  }
+  let doMe = 1;
+  while (doMe) {
+    ii = 0;
+    doMe = 0;
+    while (ii < arr.length) {
+      if (arr[ii + 1] < arr[ii]) {
+        let high = arr[ii];
+        arr[ii] = arr[ii + 1];
+        arr[ii + 1] = high;
+        doMe = 1;
+      }
+      ii++;
+    }
+  }
+
+  return arr;
+}
+
+sortMe(arryu);
+console.log(sortMe(arryu));
+arryu;
